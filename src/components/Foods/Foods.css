@@ -1,0 +1,11 @@
+.foods {
+    background-color:#f1f2f5;
+}
+
+
+.foods__cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}

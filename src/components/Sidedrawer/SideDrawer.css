@@ -1,0 +1,21 @@
+.MuiPaper-root {
+    /* background: linear-gradient(45;deg, black, transparent) !important; */
+    background-color: #F0F2F5 !important;
+}
+.sidedrawer__container__image {
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+
+.sidedrawer__container__image > img {
+    height: 50px;
+    width: 60px;
+    margin: 5px;
+}
+
+.sidedrawer__container__image > h3 {
+    margin-left:5px;
+    color: bisque;
+}
+

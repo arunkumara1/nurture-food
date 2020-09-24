@@ -1,0 +1,32 @@
+.footer__container > p {
+    color: white;
+}
+
+.app__footer__info {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+}
+
+.footer__header >  .MuiSvgIcon-root {
+    color: bisque;
+}
+
+.app__footer__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer__header > p {
+    margin-left: 10px;
+}
+.footer__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.app__footer__header > a{
+    margin: 5px;
+    cursor: pointer;
+}

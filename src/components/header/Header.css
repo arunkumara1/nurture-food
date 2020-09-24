@@ -1,0 +1,109 @@
+.header{
+    color:bisque;
+    background-color: black;
+    /* background: linear-gradient(45;deg, black, transparent); */
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.MuiButton-label{
+    color:bisque !important
+}
+
+.header__center > form > button {
+    display: none;
+}
+
+.header__center {
+    display: flex; 
+    align-items: center;
+    flex:1;
+    margin-left:120px;
+    margin-right:120px;
+
+}
+
+.header__center > form {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+.header__center > form > input {
+    height: 30px;
+    outline-width: 0;
+    border:none;
+    padding: 5px 20px;
+    border-radius: 999px;
+    margin: 0 10px;
+    background-color: #F0F2F5;
+    width: 100%;
+}
+
+.header__left {
+    padding: 0 10px;
+    display: flex;
+}
+
+.header__left__image > img {
+    height: 30px;
+    margin: 5px;
+}
+
+.header__left__image {
+    display: flex;
+    align-items: center;
+}
+
+.header__left__image > h3 {
+    margin-left:5px;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.header__right__cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.header__right__cart > .MuiSvgIcon-root {
+    color:bisque;
+}
+
+.header__right__cart_option > .MuiSvgIcon-root {
+    color:bisque;
+}
+
+.header__right__cart_option {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.header__right__cart_option > p {
+    margin-left: 10px;
+    margin-right: 10px;
+    color:bisque;
+
+}
+
+.header__right__info {
+    font-size: larger;
+    color:bisque;
+}
+
+.header__optionLineTwo{
+    font-size: larger;
+    color:bisque;
+}
