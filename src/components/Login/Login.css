@@ -1,0 +1,23 @@
+.login {
+    min-height: 80vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(lightgoldenrodyellow,dimgray);
+}
+
+.login__button {
+    margin: auto;
+    /* display: flex; */
+    position: relative;
+    height: 28vh;
+    /* bottom: 250px; */
+    /* left:840px; */
+
+}
+
+.login__image > img {
+    height: 400px;
+    /* width: 400px; */
+    
+}

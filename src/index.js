@@ -4,6 +4,16 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
+import reducer, { initialState } from './store/reducer';
+import { StateProvider } from './store/StateProvider';
 
-ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
+
+const app = (
+    <StateProvider initialState={initialState} reducer={reducer}>
+        <App />
+    </StateProvider>
+);
+
+
+ReactDOM.render(<BrowserRouter>{app}</BrowserRouter>, document.getElementById('root'));
 registerServiceWorker();

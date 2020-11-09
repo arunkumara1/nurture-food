@@ -20,6 +20,9 @@ import ContactMailIcon from '@material-ui/icons/ContactMail';
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 import TrackChangesIcon from '@material-ui/icons/TrackChanges';
 import { useHistory } from 'react-router-dom';
+import { useStateValue } from '../../store/StateProvider.js';
+import { auth } from '../../firebase/firebase.js';
+import { actionTypes } from '../../store/reducer.js';
 
 
 const SideDrawer = () => {
@@ -31,12 +34,14 @@ const SideDrawer = () => {
   });
 
 
+  const [{ user }, dispatch] = useStateValue();
+
   const history = useHistory();
 
   const traversePage = (text) => {
     switch (text.target.innerText) {
       case 'Cart':
-        history.push('/cart');
+        user ? history.push('/cart') :  history.push('/login')
         break;
       case 'Orders':
         history.push('/orders');
@@ -44,7 +49,21 @@ const SideDrawer = () => {
       case 'Home':
         history.push('/');
         break;
+      case 'Contact Us':
+        history.push('/contact');
+        break;
+      case 'Log In':
+        history.push('/login');
+        break;
+      case 'Log Out':
+        history.push('/');
+        dispatch({
+            type:actionTypes.SET_USER,
+            user: null
+        })
+        break;
       default:
+        history.push('/');
         break;
     }
   }
@@ -79,8 +98,8 @@ const SideDrawer = () => {
       </List>
       <Divider />
       <List>
-        {['Contact Us', 'LogOut'].map((text, index) => (
-          <ListItem button key={text} onClick={() => alert(text)} >
+        {['Contact Us', user !== null ? "Log Out" : "Log In"].map((text, index) => (
+          <ListItem button key={text} onClick={(text) => traversePage(text)} >
             <ListItemIcon>{
               text === 'Contact Us' ? <ContactSupportIcon /> : <ExitToAppIcon />
             }</ListItemIcon>

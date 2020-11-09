@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './SlideComponent.css';
 import 'react-slideshow-image/dist/styles.css'
 import { Zoom } from 'react-slideshow-image';
@@ -22,12 +22,12 @@ const SlideComponent = () => {
 
 
   return (
-    <div class="home__slider-container">
+    <div className="home__slider-container">
         <Zoom {...zoomOutProperties} >
           {
             images.map((img,index) => (
               <div className="imgs__container" key={index} style={{width: "100%"}} >
-                <img className ="img__container" src={img}/>
+                <img className ="img__container" src={img} lat={img} />
               </div>
             ))
 

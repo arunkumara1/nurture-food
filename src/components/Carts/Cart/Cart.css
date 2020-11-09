@@ -30,6 +30,7 @@ justify-content: space-between;
 .cart__option__modify {
     justify-content: space-between;
     margin-top: 20px;
+    width: 200px;
 }
 
 .cart__left {
@@ -43,8 +44,9 @@ justify-content: space-between;
 
 .cart__center > p {
     font-style: oblique;
-    font-size: large;
+    font-size: x-large;
     font-weight: bold;
+    margin-left: 72px;
 }
 
 .cart__right {
